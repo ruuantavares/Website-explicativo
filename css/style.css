@@ -58,6 +58,13 @@ button:hover,
   background-color: #005f87;
 }
 
+footer {
+  background-color: #0077b6;
+  color: white;
+  text-align: center;
+  padding: 20px 0;
+  
+}
 .caixa-destaque {
   background-color: #fffa65;
   border: 2px solid #f1c40f;
