@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Aprendendo JavaScript</title>
+    <link rel="stylesheet" href="../css/style.css" />
+  </head>
+  <body>
+    <header>
+      <h1>Bem vindo ao Meu Web Site Explicativo</h1>
+      <nav>
+        <ul>
+          <li><a href="../index.html">HTML</a></li>
+          <li><a href="../css/index.html">CSS</a></li>
+          <li><a href="index.html">JavaScript</a></li>
+          <li><a href="../react/index.html">React</a></li>
+          <li><a href="../node/index.html">Node.js</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+      <section class="secao">
+        <h2>O que é JavaScript?</h2>
+        <p>
+          JavaScript é a linguagem que adiciona interatividade aos sites. Com
+          ele, podemos manipular textos, imagens, estilos, responder a eventos
+          de clique e muito mais!
+        </p>
+      </section>
+
+      <section class="secao">
+        <h2>Exemplo prático:</h2>
+        <h4 id="texto-exemplo">Este texto será alterado pelo JavaScript.</h4>
+        <button id="btn-alterar">Clique para mudar o texto</button>
+
+        <h4 id="texto-cor">Podemos também alterar a cor do fundo da página.</h4>
+        <button id="btn-alterar-cor">Clique para Alterar a cor</button>
+
+        <h4>Contador Interativo</h4>
+        <p id="contador">0</p>
+        <button id="aumentar">Aumentar</button>
+        <button id="diminuir">Diminuir</button>
+        <button id="resetar">Resetar</button>
+      </section>
+
+      <section class="secao">
+        <button onclick="window.location.href='../index.html'">
+          Voltar para o HTML
+        </button>
+      </section>
+    </main>
+
+    <footer>
+      <p>&copy; 2025 RuanTavares. Todos direitos reservados</p>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>
