@@ -7,7 +7,7 @@ body {
 }
 
 header {
-  background-color: #0077b6;
+  background-color: #b65200;
   color: white;
   text-align: center;
   padding: 20px 0;
@@ -39,12 +39,12 @@ main {
 
 h2,
 h3 {
-  color: #0077b6;
+  color: #111518;
 }
 
 button,
 .btn {
-  background-color: #0077b6;
+  background-color: #b65200;
   color: white;
   border: none;
   padding: 10px 15px;
@@ -55,11 +55,11 @@ button,
 
 button:hover,
 .btn:hover {
-  background-color: #005f87;
+  background-color: #873100;
 }
 
 footer {
-  background-color: #0077b6;
+  background-color: #b65200;
   color: white;
   text-align: center;
   padding: 20px 0;
@@ -77,7 +77,7 @@ footer {
 
 .caixa-destaque-azul {
   background-color: #437aa1;
-  border-left: 5px solid #2196f3;
+  border-left: 5px solid #f37521;
   padding: 15px;
   margin: 20px 0;
   border-radius: 6px;
@@ -110,19 +110,19 @@ footer {
 
 .tabela-exemplo th,
 .tabela-exemplo td {
-  border: 1px solid #0077b6;
+  border: 1px solid #080808;
   padding: 8px;
   text-align: left;
 }
 
 .tabela-exemplo th {
-  background-color: #0077b6;
+  background-color: #b66100;
   color: white;
 }
 
 .secao {
-  background-color: #e3f2fd;
-  border: 2px solid #0077b6;
+  background-color: #808f9b;
+  border: 2px solid #b66d00;
   border-radius: 10px;
   padding: 15px;
   margin-bottom: 20px;
@@ -130,17 +130,17 @@ footer {
 
 pre {
   background-color: #fff;
-  border: 1px solid #0077b6;
+  border: 1px solid #131313;
   padding: 10px;
   overflow-x: auto;
 }
 
 .contador-container {
   margin: 20px 0;
-  border: 2px solid #0077b6;
+  border: 2px solid #b66d00;
   border-radius: 10px;
   padding: 20px;
-  background-color: #e3f2fd;
+  background-color: #808f9b;
 }
 
 .contador-valor {

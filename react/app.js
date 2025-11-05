@@ -1,13 +1,13 @@
 function App() {
   const [contador, setContador] = React.useState(0);
-  const [cor, setCor] = React.useState("#0077b6");
+  const [cor, setCor] = React.useState("#1a1b1bff");
 
   const [tarefas, setTarefas] = React.useState([]);
   const [novaTarefa, setNovaTarefa] = React.useState("");
 
   const aumentar = () => {
     setContador(contador + 1);
-    setCor("#0077b6"); // azul
+    setCor("#0c7c24ff"); // azul
   };
 
   const diminuir = () => {
@@ -19,7 +19,7 @@ function App() {
 
   const resetar = () => {
     setContador(0);
-    setCor("#0077b6");
+    setCor("#1a1b1bff");
   };
 
   const adicionarTarefa = () => {
