@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Aprendendo HTML</title>
+    <link rel="stylesheet" href="../css/style.css" />
+  </head>
+  <body>
+    <header>
+      <h1>Bem vindo ao Meu Web Site Explicativo</h1>
+      <nav>
+        <ul>
+          <li><a href="../index.html">Introdução</a></li>
+          <li><a href="./html/index.html">HTML</a></li>
+          <li><a href="../css/index.html">CSS</a></li>
+          <li><a href="../js/index.html">JavaScript</a></li>
+          <li><a href="../react/index.html">React</a></li>
+          <li><a href="../node/index.html">Node.js</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+
+      <section class="secao">
+        <h2>O que é HTML?</h2>
+        <p>
+          HTML é a linguagem que usamos para estruturar o conteúdo de uma página web. Ele define títulos, parágrafos, imagens, links e muito mais.
+        </p>
+      </section>
+
+
+      <section class="secao">
+        <h2>Por que aprender HTML?</h2>
+        <p>
+          Sem HTML, não existe site! É o primeiro passo para qualquer desenvolvedor web.
+        </p>
+      </section>
+
+      <section class="secao">
+        <h2>Estrutura basica</h2>
+        <pre>
+
+          &lt;!DOCTYPE html&gt;
+          &lt;html&gt; -- Define o início do documento HTML
+          &lt;head&gt; -- Contém informações sobre o site 
+              &lt;meta charset="UTF-8"&gt; -- Define o padrão de caracteres
+              &lt;title&gt;Título da Página&lt;/title&gt; -- Nome que aparece na aba do navegador
+          &lt;/head&gt;
+          &lt;body&gt; -- Conteúdo visível da página 
+          &lt;/body&gt;
+          &lt;/html&gt;
+
+
+        </pre>
+        
+      </section>
+
+      <section class="secao">
+        <h2>Cabeçalhos e texto</h2>
+        <pre>
+
+          &lt;h1&gt; até &lt;h6&gt; - Títulos (H1 é o maior, H6 o menor) 
+          &lt;p&gt; -- Parágrafo 
+          &lt;br&gt; -- Quebra de linha 
+          &lt;hr&gt; -- Linha horizontal 
+          &lt;strong&gt; ou &lt;b&gt; -- Texto em negrito 
+          &lt;em&gt; ou &lt;i&gt; -- Texto em itálico 
+          &lt;u&gt; -- Sublinhado 
+
+        </pre>
+
+        <h1> Título </h1>
+        <h2> Título </h2>
+        <h3> Título </h3>
+        <h4> Título </h4>
+        <h5> Título </h5>
+        <h6> Título </h6>
+        <p>Parágrafo</p>
+        <br> Quebra de linha
+        <hr>
+        <strong> texto em negrito </strong> <br>
+        <em> Texto em itálico <i> <br>
+        <u>Sublinhado</u>
+
+        
+      </section>
+
+      <section class="secao">
+        <h2>Exemplos de Listas</h2>
+        <pre>
+          &lt;ol&gt; -- Lista ordenada (numerada) 
+               &lt;li&gt;Aprender HTML&lt;/li&gt;
+               &lt;li&gt;Aprender CSS&lt;/li&gt;
+               &lt;li&gt;Aprender JavaScript&lt;/li&gt;
+          &lt;ol&gt;
+          
+          &lt;ul&gt; -- Lista não ordenada (com ponto) 
+               &lt;li&gt;Cabeçalho e rodapé&lt;/li&gt;
+               &lt;li&gt;Navegação&lt;/li&gt;
+               &lt;li&gt;Seções de conteúdo&lt;/li&gt;
+          &lt;/ul&gt;
+
+        </pre>
+        <h3>Lista ordenada:</h3>
+        <ol>
+          <li>Aprender HTML</li>
+          <li>Aprender CSS</li>
+          <li>Aprender JavaScript</li>
+        </ol>
+
+        <h3>Lista não ordenada:</h3>
+        <ul>
+          <li>Cabeçalho e rodapé</li>
+          <li>Navegação</li>
+          <li>Seções de conteúdo</li>
+        </ul>
+      </section>
+
+      <section class="secao">
+        <h2>Exemplo de Imagem e Mídia</h2>
+        <pre>
+
+          &lt;img src="imagem.jpg" alt="Descrição"&gt; -- Exibe uma imagem 
+          &lt;video src="video.mp4" controls&gt;&lt;/video&gt; -- Vídeo com controles 
+          &lt;audio src="audio.mp3" controls&gt;&lt;/audio&gt; -- Áudio 
+
+        </pre>
+        <img src="../assets/exemplo.jpg" alt="Exemplo de imagem" width="300" /> <br>
+        <video src="video.mp4" controls></video> <br>
+        <audio src="audio.mp3" controls></audio>
+      </section>
+
+      <section class="secao">
+        <h2>Exemplo de Links</h2>
+        <pre>
+          &lt;a href="url">Texto do link&lt;/a&gt; -- Cria um link
+
+         &lt;nav&gt; -- Agrupa links de navegação
+
+        </pre>
+        <a href="https://github.com/ruuantavares" target="_blank">Visitar meu github</a>
+      </section>
+
+      <section class="secao">
+        <h2>Exemplo de Tabela</h2>
+        <pre>
+          
+          &lt;table&gt;
+            &lt;tr&gt; -- Linha 
+               &lt;th&gt;Nome&lt;/th&gt; -- Cabeçalho
+               &lt;th&gt;Idade&lt;/th&gt;
+               &lt;th&gt;Cidade&lt;/th&gt;
+            &lt;/tr&gt;
+            &lt;tr&gt;
+               &lt;td&gt;Ruan&lt;/td&gt; -- Célula
+               &lt;td&gt;30&lt;/td&gt;
+               &lt;td&gt;Joinville&lt;/td&gt;
+            &lt;/tr&gt;
+          &lt;/table&gt;
+
+        </pre>
+        <table class="tabela-exemplo">
+          <tr>
+            <th>Nome</th>
+            <th>Idade</th>
+            <th>Cidade</th>
+          </tr>
+          <tr>
+            <td>Ruan</td>
+            <td>30</td>
+            <td>Joinville</td>
+          </tr>
+          <tr>
+            <td>Joãozinho</td>
+            <td>25</td>
+            <td>São Paulo</td>
+          </tr>
+        </table>
+      </section>
+                                                         
+      <section class="secao">
+        <h2>Exemplo de Formulário</h2> 
+          <pre>
+            <h4>Para criar um formulário, usamos a tag &lt;form&gt;, e com ela podemos usar alguns atributos como por exemplo:</h4>
+            <ul>
+              <li>type = define qual vai ser o tipo de input</li>
+              <li>value = define o valor do campo</li>
+              <li>placeholder = define o valor do campo que fica "invisivel", enquanto o usuario não digita</li>
+            </ul>
+            <h4>Exemplo: </h4>
+            &lt;form&gt;
+              Nome:&lt;input type="text" name="txtnome" value="Digite seu nome"&gt;
+              Email:&lt;input type="email" name="email" value="Digite seu email"&gt;
+              Mensagem:&lt;input id="mensagem" name="mensagem" value="Escreva sua mensagem"&gt;
+            &lt;/form&gt;
+          </pre>
+        <form>
+          <label for="nome">Nome:</label>
+          <input type="text" id="nome" name="nome" placeholder="Digite seu nome" /><br /><br />
+
+          <label for="email">Email:</label>
+          <input type="email" id="email" name="email" placeholder="Digite seu email" /><br /><br />
+
+          <label for="mensagem">Mensagem:</label><br />
+          <textarea id="mensagem" name="mensagem" rows="4" cols="40" placeholder="Escreva sua mensagem" ></textarea><br /><br />
+
+          <button type="submit">Enviar</button>
+        </form>
+      </section>
+
+    </main>
+
+    <footer>
+      <p>&copy; 2025 RuanTavares. Todos direitos reservados</p>
+    </footer>

@@ -3,47 +3,195 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Aprendendo React</title>
+    <title>Aprendendo REACT</title>
     <link rel="stylesheet" href="../css/style.css" />
-
-    <script
-      src="https://unpkg.com/react@18/umd/react.development.js"
-      crossorigin
-    ></script>
-    <script
-      src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"
-      crossorigin
-    ></script>
-    <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
   </head>
   <body>
     <header>
       <h1>Bem vindo ao Meu Web Site Explicativo</h1>
       <nav>
         <ul>
-          <li><a href="../index.html">HTML</a></li>
+          <li><a href="../index.html">Introdução</a></li>
+          <li><a href="../html/index.html">HTML</a></li>
           <li><a href="../css/index.html">CSS</a></li>
           <li><a href="../js/index.html">JavaScript</a></li>
-          <li><a href="index.html">React</a></li>
+          <li><a href="./react/index.html">React</a></li>
           <li><a href="../node/index.html">Node.js</a></li>
         </ul>
       </nav>
     </header>
 
     <main>
-      <div id="root"></div>
+      <section class="secao">
+        <h2>O que é REACT?</h2>
+        <p>
+          O React é uma biblioteca JavaScript criada pelo Facebook (Meta) para
+          construir interfaces de usuário (UI) de forma rápida, modular e
+          reativa. Ele é usado em sites e aplicativos modernos como Instagram,
+          Netflix, Airbnb e muitos outros.
+        </p>
+      </section>
 
       <section class="secao">
-        <button onclick="window.location.href='../index.html'">
-          Voltar para o HTML
-        </button>
+        <h2>Conceito de Componentes :</h2>
+        <p>
+          Um componente é como uma função que retorna um pedaço da interface
+          (HTML com lógica).
+        </p>
+        <pre>
+          <h3>Exemplo simples de componente :</h3>
+          function OlaMundo() {
+           return &lt;h1&gt;Olá, mundo!&lt;/h1&gt;;
+          }
+          <h3>Esse componente pode ser usado assim:</h3>
+          function App() {
+          return (
+            &lt;div&gt;
+               &lt;OlaMundo /&gt;
+            &lt;/div&gt;
+          );
+          }
+        </pre>
+      </section>
+
+      <section class="secao">
+        <h2>Criando um projeto (com Vite) :</h2>
+        <pre>
+          <h3>No terminal, vamos digitar :</h3>
+            npm create vite@latest meu-projeto -- --template react
+          <h3>Explicação: 
+            <ul>
+              <li>npm create vite@latest → cria um novo projeto Vite.</li>
+              <li>meu-projeto → é o nome da sua pasta/projeto.</li>
+              <li>--template react → diz que você quer o template React + JavaScript (pode usar react-ts se quiser TypeScript).</li>
+              <li>o -- duplo é necessário no Windows para passar argumentos ao Vite.</li>
+            </ul>
+          </h3>
+        </pre>
+      </section>
+
+      <section class="secao">
+        <h2>Estrutura do projeto</h2>
+        <pre>
+          <h3>Após criar, entre na pasta:</h3>
+            cd meu-projeto
+          <h3>e instale as dependências:</h3>
+            npm install
+          <h3>A estrutura básica será:</h3>
+          meu-projeto/
+          ├─ node_modules/
+          ├─ public/
+          │   └─ vite.svg
+          ├─ src/
+          │   ├─ assets/
+          │   │   └─ react.svg
+          │   ├─ App.css
+          │   ├─ App.jsx
+          │   ├─ index.css
+          │   └─ main.jsx
+          ├─ .gitignore
+          ├─ index.html
+          ├─ package.json
+          ├─ vite.config.js
+          └─ README.md
+          <h3>Principais arquivos :</h3>
+          --------------------------------------------------------------------------
+          | Arquivo                         | Função                               |
+          | ------------------------------- | ------------------------------------ |
+          | index.html                      | página principal do app              |
+          | src/main.jsx                    | ponto de entrada React (monta o App) |
+          | src/App.jsx                     | componente principal                 |
+          | src/App.css e src/index.css     | estilos padrão                       |
+          | `vite.config.js`                | configuração do Vite                 |
+          | package.json                    | lista dependências e scripts         |
+          --------------------------------------------------------------------------
+
+        </pre>
+      </section>
+
+      <section class="secao">
+        <h2>Rodando o projeto</h2>
+        <pre>
+          <h3>Para iniciar o servidor local :</h3>
+          npm run dev
+          <h3>O Vite exibirá algo como :</h3>
+            VITE v5.0.0  ready in 200ms
+            Local:   http://localhost:1010/
+
+        </pre>
+      </section>
+
+      <section class="secao">
+        <h2>Estrutura básica do React no Vite :</h2>
+        <pre>
+          <h3>index.html</h3>
+          &lt;!doctype html&gt;
+          &lt;html lang="pt-BR"&gt;
+            &lt;head&gt;
+              &lt;meta charset="UTF-8" /&gt;
+              &lt;meta name="viewport" content="width=device-width, initial-scale=1.0" /&gt;
+              &lt;title&gt;React com Vite&lt;/title&gt;
+            &lt;/head&gt;
+            &lt;body&gt;
+              &lt;div id="root"&gt;&lt;/div&gt;
+              &lt;script type="module" src="/src/main.jsx"&gt;&lt;/script&gt;
+            &lt;/body&gt;
+          &lt;/html&gt;
+
+          <h4>O React será montado dentro do elemento &lt;div id="root"&gt;.</h4>
+
+          <h3>src/main.jsx</h3>
+          import React from 'react'
+          import ReactDOM from 'react-dom/client'
+          import App from './App.jsx'
+          import './index.css'
+
+          ReactDOM.createRoot(document.getElementById('root')).render(
+            &lt;React.StrictMode&gt;
+              &lt;App /&gt;
+            &lt;/React.StrictMode&gt;,
+          )
+          <h4>Aqui é onde o React "entra" no HTML e renderiza o componente &lt;App /&gt;.</h4>
+
+          <h3>src/App.jsx</h3>
+          import { useState } from 'react'
+          import './App.css'
+
+          function App() {
+            const [count, setCount] = useState(0)
+
+            return (
+              &lt;div className="App"&gt;
+                &lt;h1&gt;Olá, React com Vite!&lt;/h1&gt;
+                &lt;button onClick={() =&gt; setCount(count + 1)}&gt;
+                  Cliquei {count} vezes
+                &lt;/button&gt;
+              &lt;/div&gt;
+            )
+          }
+
+          export default App
+          <h4>Esse é o componente principal do seu app.</h4>
+
+        </pre>
+      </section>
+
+      <section class="secao">
+        <h2>Rodando, editando e aprendendo :</h2>
+        <pre>
+          <h3>Agora podemos :</h3>
+          <ul>
+            <li>Criar novos componentes dentro de src/components/</li>
+            <li>Importar com import MeuComponente from './components/MeuComponente'</li>
+            <li>Alterar estilos em App.css ou index.css</li>
+          </ul>
+          <h4>O Vite recarrega automaticamente a página sem perder o estado, a cada alteração salva.</h4>
+        </pre>
       </section>
     </main>
 
     <footer>
       <p>&copy; 2025 RuanTavares. Todos direitos reservados</p>
     </footer>
-
-    <script type="text/babel" src="app.js"></script>
   </body>
 </html>

@@ -11,8 +11,9 @@
       <h1>Bem vindo ao Meu Web Site Explicativo</h1>
       <nav>
         <ul>
-          <li><a href="../index.html">HTML</a></li>
-          <li><a href="index.html">CSS</a></li>
+          <li><a href="../index.html">Introdução</a></li>
+          <li><a href="../html/index.html">HTML</a></li>
+          <li><a href="./css/index.html">CSS</a></li>
           <li><a href="../js/index.html">JavaScript</a></li>
           <li><a href="../react/index.html">React</a></li>
           <li><a href="../node/index.html">Node.js</a></li>
@@ -31,37 +32,164 @@
       </section>
 
       <section class="secao">
-        <h2>Exemplos práticos:</h2>
-        <p>Veja abaixo o que podemos alterar no texto com CSS!</p>
+        <h2>Formas de aplicar o CSS</h2>
+        <pre>
 
-        <div class="texto-azul">
-          <p>Este texto está em azul graças ao CSS.</p>
-        </div>
+            -- Inline --
+            &lt;p style="color: blue;"&gt;Texto azul&lt;/p&gt;
 
-        <div class="caixa-destaque">
-          <p>O CSS nos permite deixar o site mais bonito e organizado!</p>
-        </div>
+            -- Interno --
+            &lt;style&gt;
+              p { color: red; }
+            &lt;/style&gt;
 
-        <div class="caixa-destaque-azul">
-          <p>
-            Este é um exemplo de caixa de destaque azul, perfeita para avisos ou
-            informações importantes.
-          </p>
-        </div>
+            -- Externo --
+            &lt;link rel="stylesheet" href="estilo.css"&gt;
 
-        <div class="caixa-destaque-verde">
-          <p>Sucesso! Tudo ocorreu bem.</p>
-        </div>
 
-        <div class="caixa-destaque-vermelha">
-          <p>Erro: algo deu errado.</p>
-        </div>
+
+        </pre>
       </section>
 
       <section class="secao">
-        <button onclick="window.location.href='../index.html'">
-          Voltar para o HTML
-        </button>
+        <h2>Principais Seletores</h2>
+
+        <h3>Seletor por TAG :</h3>
+        <pre>
+
+            p {
+               color: blue;
+              }
+           
+        </pre>
+        <h4>Aplica o estilo a todas as tags &lt;p&gt;</h4>
+
+        <h3>Seletor por classe :</h3>
+        <pre>
+
+          .texto {
+                 color: green;
+                }
+
+        </pre>
+        <h4>Usado em elementos com class="texto"</h4>
+
+        <h3>Seletor por id :</h3>
+        <pre>
+          
+          #titulo {
+            font-size: 24px;
+          }
+
+        </pre>
+        <h4>Usado em elementos com id="titulo"</h4>
+
+        <h3>Seletores combinados :</h3>
+        <pre>
+          
+          div p {
+            color: purple;
+          }
+          
+        </pre>
+        <h4>Afeta apenas &lt;p&gt; dentro de &lt;div&gt;</h4>
+      </section>
+
+      <section class="secao">
+        <h3>Propriedades de Texto :</h3>
+        <pre>
+          
+          color: red; -- Cor do texto
+          font-size: 20px; -- Tamanho da fonte 
+          font-family: Arial, sans-serif; -- Tipo da fonte 
+          font-weight: bold; -- Negrito 
+          text-align: center; -- Alinhamento 
+          text-decoration: underline; -- Sublinhado 
+          line-height: 1.5; -- Espaçamento entre linhas 
+          
+        </pre>
+      </section>
+
+      <section class="secao">
+        <h3>Propriedades de Caixa (Box Model) :</h3>
+        <pre>
+          
+          width: 200px; -- Largura 
+          height: 100px; -- Altura 
+          margin: 10px; -- Espaço externo 
+          padding: 15px; -- Espaço interno 
+          border: 2px solid black; -- Borda 
+          border-radius: 10px; -- Cantos arredondados 
+          box-shadow: 2px 2px 5px gray; -- Sombra 
+          
+        </pre>
+      </section>
+
+      <section class="secao">
+        <h3>Cores e fundos :</h3>
+        <pre>
+          
+          background-color: lightblue; -- Cor de fundo 
+          background-image: url('fundo.jpg'); -- Imagem de fundo 
+          background-size: cover; -- Ajusta a imagem 
+          opacity: 0.8; -- Transparência 
+          
+        </pre>
+      </section>
+
+      <section class="secao">
+        <h3>Display e posicionamento :</h3>
+        <pre>
+          
+          display: block; -- Ocupa toda a linha 
+          display: inline; -- Fica na mesma linha 
+          display: flex; -- Layout flexível 
+          display: grid; -- Layout em grade 
+          position: absolute; -- Posição fixa em relação ao pai 
+          position: fixed; -- Fixa na tela 
+          position: relative; -- Base para posições internas 
+          top: 10px; left: 20px; -- Deslocamento 
+          
+        </pre>
+      </section>
+
+      <section class="secao">
+        <h3>Flexbox (organização de layout) :</h3>
+        <pre>
+          
+          display: flex;
+          justify-content: center; -- Centraliza horizontalmente 
+          align-items: center; -- Centraliza verticalmente 
+          flex-direction: column; -- Empilha elementos 
+          gap: 10px; -- Espaço entre itens 
+          
+        </pre>
+      </section>
+
+      <section class="secao">
+        <h3>Grid (layout em colunas e linhas) :</h3>
+        <pre>
+          
+          display: grid;
+          grid-template-columns: 1fr 1fr 1fr; -- 3 colunas iguais 
+          gap: 20px; -- Espaço entre os blocos 
+          
+        </pre>
+      </section>
+
+      <section class="secao">
+        <h3>Outros úteis :</h3>
+        <pre>
+          
+          cursor: pointer; -- Muda o cursor ao passar o mouse 
+          transition: 0.3s; -- Animação suave 
+          hover {
+            background-color: yellow; -- Cor ao passar o mouse 
+          }
+          overflow: hidden; -- Oculta o que ultrapassa o bloco 
+          z-index: 10; -- Define a ordem dos elementos 
+          
+        </pre>
       </section>
     </main>
 

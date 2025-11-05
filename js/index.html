@@ -11,9 +11,10 @@
       <h1>Bem vindo ao Meu Web Site Explicativo</h1>
       <nav>
         <ul>
-          <li><a href="../index.html">HTML</a></li>
+          <li><a href="../index.html">Introdução</a></li>
+          <li><a href="../html/index.html">HTML</a></li>
           <li><a href="../css/index.html">CSS</a></li>
-          <li><a href="index.html">JavaScript</a></li>
+          <li><a href="./js/index.html">JavaScript</a></li>
           <li><a href="../react/index.html">React</a></li>
           <li><a href="../node/index.html">Node.js</a></li>
         </ul>
@@ -31,24 +32,241 @@
       </section>
 
       <section class="secao">
-        <h2>Exemplo prático:</h2>
-        <h4 id="texto-exemplo">Este texto será alterado pelo JavaScript.</h4>
-        <button id="btn-alterar">Clique para mudar o texto</button>
+        <h2>Formas de usar JavaScript :</h2>
+        <pre>
+         -- Interno
+          &lt;script&gt;
+              alert("Olá, mundo!");
+          &lt;/script&gt;
 
-        <h4 id="texto-cor">Podemos também alterar a cor do fundo da página.</h4>
-        <button id="btn-alterar-cor">Clique para Alterar a cor</button>
-
-        <h4>Contador Interativo</h4>
-        <p id="contador">0</p>
-        <button id="aumentar">Aumentar</button>
-        <button id="diminuir">Diminuir</button>
-        <button id="resetar">Resetar</button>
+           -- Externo
+          &lt;script src="script.js"&gt;&lt;/script&gt;
+        </pre>
       </section>
 
       <section class="secao">
-        <button onclick="window.location.href='../index.html'">
-          Voltar para o HTML
-        </button>
+        <h2>Variáveis e Constantes :</h2>
+        <pre>
+          let idade = 25; -- Variável que pode mudar
+          const pais = "Brasil"; -- Valor fixo
+        </pre>
+      </section>
+
+      <section class="secao">
+        <h2>Tipos de dados :</h2>
+        <pre>
+          let texto = "Olá";      -- String (texto)
+          let numero = 10;        -- Number
+          let ativo = true;       -- Boolean (true/false)
+          let lista = [1, 2, 3];  -- Array (lista)
+          let pessoa = { nome: "Ana", idade: 20 }; -- Objeto
+        </pre>
+      </section>
+      <section class="secao">
+        <h2>Operadores básicos :</h2>
+        <pre>
+            <h3>Operador Matemático</h3>
+            <p>Usados para fazer cálculos e manipular números:</p>
+            --------------------------------------------------------------------------
+            |Operador| Nome                      | Exemplo  | Resultado              |
+            |------- | ------------------------- | -------- | ---------------------- |
+            | +      | Adição                    | 5 + 2    | 7                      |
+            | -      | Subtração                 | 8 - 3    | 5                      |
+            | *      | Multiplicação             | 4 * 6    | 24                     |
+            | /      | Divisão                   | 10 / 2   | 5                      |
+            | %      | Resto da divisão (módulo) | 10 % 3   | 1 (sobra da divisão)   |
+            --------------------------------------------------------------------------
+
+            <h3>Operadores Relacionais (ou de comparação)</h3>
+            <p>Usados para comparar valores. O resultado sempre é true (verdadeiro) ou false (falso).</p>
+            --------------------------------------------------------------------------------------------------
+            | Operador | Significado                      | Exemplo     | Resultado                          |
+            | -------- | -------------------------------- | ----------- | -----------------------------------|
+            | >        | Maior que                        | 10 > 5    | true                                 |
+            | <        | Menor que                        | 8 < 3     | false                                |
+            | >=       | Maior ou igual a                 | 5 >= 5    | true                                 |
+            | <=       | Menor ou igual a                 | 7 <= 4    | false                                |
+            | ==       | Igual a (compara valores)        | "5" == 5  | true (converte tipo automaticamente) |
+            | ===      | Igual a (valor **e tipo**)       | "5" === 5 | false (string ≠ número)              |
+            | !=       | Diferente de (valor)             | "5" != 5  | false                                |
+            | !==      | Diferente de (valor **ou tipo**) | "5" !== 5 | true                                 |
+            --------------------------------------------------------------------------------------------------
+
+            <h3>Operadores Lógicos</h3>
+            <p>Usados para combinar expressões e criar condições mais complexas.O resultado também é true ou false.</p>
+            ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+            | Operador | Nome          | Função                                                     | Exemplo             | Resultado                                                    |          |   |         |        |
+            | -------- | ------------- | ---------------------------------------------------------- | ------------------- | ------------------------------------------------------------ | -------- | - | ------- | ------ |
+            | &&       | **E (AND)**   | Retorna true **se todas** as condições forem verdadeiras   | (5 > 2 && 10 > 8)   | true                                                         |          |   |         |        |
+            |          |               |                                                            | **Ou (OR)**         | Retorna true **se pelo menos uma** condição for verdadeira   | (5 > 10  |   | 3 < 8)  | true   |
+            | !        | **Não (NOT)** | **Inverte** o valor lógico                                 | !(5 > 2)            | false                                                        |          |   |         |        |
+            ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+        </pre>
+      </section>
+      <section class="secao">
+        <h2>Estrutura if, else if e else :</h2>
+        <pre>
+          <h3>Essa estrutura testa uma condição. Se ela for verdadeira (true), o código dentro do if é executado. Se for falsa (false), o código dentro do else é executado.</h3>
+          let idade = 20;
+
+          if (idade >= 18) {
+            console.log("Maior de idade");
+          } else {
+            console.log("Menor de idade");
+          }
+
+          <h4>Explicação :</h4>
+          ---------------------------------------------------------------------------------------------
+          | Linha                                     | Código                                        |
+          | ----------------------------------------- | --------------------------------------------- |
+          | if (idade >= 18)                          | Verifica se a idade é **maior ou igual a 18** |
+          | { console.log("Maior de idade"); }        | Executa se a condição for **verdadeira**      |
+          | else { console.log("Menor de idade"); }   | Executa se a condição for **falsa**           |
+          ---------------------------------------------------------------------------------------------
+        </pre>
+      </section>
+
+      <section class="secao">
+        <h2>Laços de Repetição (Loops)</h2>
+        <pre>
+          <h3>Os laços de repetição permitem que um bloco de código seja executado várias vezes, sem precisar escrever o mesmo comando repetidamente.</h3>
+          for (let i = 1; i <= 5; i++) {
+            console.log("Número: " + i);
+          }
+          
+          <h4>Explicação :</h4>
+          ----------------------------------------------------------------------------------------
+          | Parte                         | Código                                               |
+          | ----------------------------- | ---------------------------------------------------- |
+          | let i = 1                     | Cria a variável **contador**, começando em 1         |
+          | i <= 5                        | Condição: repete enquanto i for menor ou igual a 5   |
+          | i++                           | Soma +1 a cada repetição (incremento)                |
+          | console.log("Número: " + i)   | Mostra o número atual no console                     |
+          ----------------------------------------------------------------------------------------
+        </pre>
+      </section>
+
+      <section class="secao">
+        <h2>while (enquanto) :</h2>
+        <pre>
+          <h3>Usado quando você não sabe quantas vezes vai repetir — ele repete enquanto a condição for verdadeira.</h3>
+          let contador = 1;
+
+          while (contador <= 3) {
+            console.log("Contagem: " + contador);
+            contador++;
+            }
+
+            <h4>Como funciona :</h4>
+            <ol>
+              <li>Cria contador = 1;</li>
+              <li>Verifica se contador <= 3;</li>
+              <li>Executa o bloco;</li>
+              <li>Soma +1;</li>
+              <li>Repete até a condição ser falsa.</li>
+            </ol>
+
+        </pre>
+      </section>
+      <section class="secao">
+        <h2>do...while (faça enquanto) :</h2>
+        <pre>
+          <h3>Ele executa pelo menos uma vez, mesmo que a condição seja falsa.</h3>
+          let n = 5;
+
+          do {
+            console.log("Número é: " + n);
+            n++;
+          } while (n &lt; 5);
+
+          <h4>Nesse caso, mesmo n sendo 5 (não menor que 5), ele executa uma vez antes de verificar a condição.</h4>
+        </pre>
+      </section>
+
+      <section class="secao">
+        <h2>Funções (Functions) :</h2>
+        <pre>
+          <h3>As funções servem para organizar, reutilizar e estruturar melhor o código. Elas executam uma tarefa e podem retornar valores.</h3>
+          function saudacao() {
+            console.log("Olá, bem-vindo!");
+          }
+
+          saudacao();
+
+          <h4>Explicação:</h4>
+          ---------------------------------------------------------------------------
+          | Linha                 | Código                                          |
+          | --------------------- | ----------------------------------------------- |
+          | function saudacao()   | Declara uma função chamada **saudacao**         |
+          | { ... }               | Define o **bloco de código** que será executado |
+          | console.log(...)      | Ação que ocorre dentro da função                |
+          | saudacao();           | Chama (executa) a função                        |
+          ---------------------------------------------------------------------------
+        </pre>
+      </section>
+
+      <section class="secao">
+        <h2>Eventos</h2>
+        <pre>
+          <h3>Os eventos são ações que acontecem na página e que o JavaScript pode “ouvir” e reagir — como um clique, o movimento do mouse, o carregamento da página ou a digitação do usuário.</h3>
+         
+          ------------------------------------------------------------------------------
+          | Evento        | Ação               | Quando ocorre                         |
+          | ------------- | ------------------ | ------------------------------------- |
+          | onclick     | Clique               | Quando o usuário clica em um elemento |
+          | ondblclick  | Duplo clique         | Quando o usuário clica duas vezes     |
+          | onmouseover | Mouse sobre          | Quando o mouse passa por cima         |
+          | onmouseout  | Mouse sai            | Quando o mouse sai de cima            |
+          | onkeydown   | Tecla pressionada    | Quando o usuário pressiona uma tecla  |
+          | onkeyup     | Tecla solta          | Quando o usuário solta a tecla        |
+          | onchange    | Valor alterado       | Quando o valor de um campo muda       |
+          | onload      | Página carregada     | Quando a página termina de carregar   |
+          | onsubmit    | Formulário enviado   | Quando um formulário é submetido      |
+          | onfocus     | Foco em campo        | Quando o usuário clica em um input    |
+          | onblur      | Sai do campo         | Quando o usuário sai de um input      |
+          ------------------------------------------------------------------------------
+          <h4>Exemplo :</h4>
+          &lt;button id="botaoTeste">Clique aqui&lt;/button&gt;
+          &lt;input type="text" id="campoTexto" placeholder="Digite algo"&gt;
+          &lt;p id="resultado"&gt;&lt;/p&gt;
+  
+          &lt;script&gt;
+            -- Evento de clique
+            document.getElementById("botaoTeste").addEventListener("click", () =&gt; {
+              document.getElementById("resultado").innerHTML = "Você clicou no botão!";
+            });
+  
+            -- Evento de digitação
+            document.getElementById("campoTexto").addEventListener("keyup", () =&gt; {
+              let texto = document.getElementById("campoTexto").value;
+              document.getElementById("resultado").innerHTML = "Digitando: " + texto;
+            });
+          &lt;/script&gt;
+        </pre>
+
+        <h3>Teste de Eventos</h3>
+
+        <button id="botaoTeste">Clique aqui</button>
+        <input type="text" id="campoTexto" placeholder="Digite algo" />
+        <p id="resultado"></p>
+
+        <script>
+          document
+            .getElementById("botaoTeste")
+            .addEventListener("click", () => {
+              document.getElementById("resultado").innerHTML =
+                "Você clicou no botão!";
+            });
+
+          document
+            .getElementById("campoTexto")
+            .addEventListener("keyup", () => {
+              let texto = document.getElementById("campoTexto").value;
+              document.getElementById("resultado").innerHTML =
+                "Digitando: " + texto;
+            });
+        </script>
       </section>
     </main>
 

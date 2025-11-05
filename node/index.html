@@ -11,11 +11,12 @@
       <h1>Bem vindo ao Meu Web Site Explicativo</h1>
       <nav>
         <ul>
-          <li><a href="../index.html">HTML</a></li>
+          <li><a href="../index.html">Introdução</a></li>
+          <li><a href="../html/index.html">HTML</a></li>
           <li><a href="../css/index.html">CSS</a></li>
           <li><a href="../js/index.html">JavaScript</a></li>
           <li><a href="../react/index.html">React</a></li>
-          <li><a href="index.html">Node.js</a></li>
+          <li><a href="./node/index.html">Node.js</a></li>
         </ul>
       </nav>
     </header>
@@ -24,66 +25,232 @@
       <section class="secao">
         <h2>O que é Node.js?</h2>
         <p>
-          Node.js é um ambiente de execução JavaScript do lado do servidor. Ele
-          permite criar aplicações web, APIs, manipular arquivos e bancos de
-          dados usando JavaScript.
+          O Node.js é um ambiente de execução que permite rodar JavaScript fora
+          do navegador, ou seja, no servidor. Ele é rápido, leve e muito usado
+          para criar APIs, servidores web e aplicações back-end.
+        </p>
+        <p>
+          Em resumo o Node transforma o JavaScript em uma linguagem full stack,
+          usada tanto no front-end (React) quanto no back-end (Node).
         </p>
       </section>
 
       <section class="secao">
-        <h2>Exemplo de servidor simples</h2>
-        <p>
-          Abaixo está um exemplo de um servidor Node.js que responde “Olá,
-          mundo!”:
-        </p>
+        <h2>Instalando o Node.js</h2>
+        <ol>
+          <li>
+            Vá até o site oficial: <a href="https://nodejs.org">nodejs.org</a>
+          </li>
+          <li>Baixe a versão LTS (Long Term Support).</li>
+          <li>Após instalar, verifique no terminal:</li>
+        </ol>
         <pre>
-          <code>
+          <h3>no terminal digite :</h3>
+          node -v
+          npm -v
+          <h4>Se aparecerem versões (ex: v22.3.0 e 10.8.1), está tudo pronto!</h4>
+      </pre>
+      </section>
+
+      <section class="secao">
+        <h2>Criando seu primeiro projeto Node</h2>
+        <p>Crie uma nova pasta e entre nela:</p>
+        <pre>
+          <h3>no terminal:</h3>
+          mkdir meu-projeto-node
+          cd meu-projeto-node
+          <h3>Depois, inicialize o projeto:</h3>
+          npm init -y
+          <h3>Isso cria o arquivo package.json, que guarda : </h3>
+          <ul>
+            <li>nome do projeto,</li>
+            <li>versão,</li>
+            <li>dependências,</li>
+            <li>scripts de inicialização.</li>
+          </ul>
+
+      </pre>
+      </section>
+
+      <section class="secao">
+        <h2>Criando um servidor simples</h2>
+        <p>Crie um arquivo chamado <strong>server.js</strong></p>
+        <pre>
+
+          -- Importa o módulo HTTP nativo do Node
           const http = require('http');
 
-          const server = http.createServer((req, res) => {
-            res.writeHead(200, {'Content-Type': 'text/plain'});
-            res.end('Olá, mundo!');
+          -- Cria o servidor
+          const servidor = http.createServer((req, res) => {
+            res.writeHead(200, { 'Content-Type': 'text/plain; charset=utf-8' });
+            res.end('Servidor Node.js rodando com sucesso!');
           });
 
-          server.listen(3000, () => {
-            console.log('Servidor rodando em http://localhost:3000');
+          -- Define a porta
+          const PORTA = 3000;
+
+          -- Inicia o servidor
+          servidor.listen(PORTA, () => {
+            console.log(`Servidor ativo em: http://localhost:${PORTA}`);
           });
-          </code>
+          <h3>Para rodar:</h3>
+          node server.js
+          <h3>Depois acesse:</h3>
+          <a href="http://localhost:3000">http://localhost:3000</a>
+
       </pre>
-        <p>
-          Para rodar: abra o terminal na pasta do projeto e digite
-          <code>node server.js</code>.
-        </p>
       </section>
 
       <section class="secao">
-        <h2>Exemplo com Express</h2>
+        <h2>Usando Express.js (framework do Node)</h2>
         <p>
-          Express é uma biblioteca popular para criar servidores web com
-          Node.js:
+          O Express é um dos frameworks mais usados com Node. Ele simplifica a
+          criação de rotas e APIs.
         </p>
         <pre>
-            <code>
-            const express = require('express');
-            const app = express();
-            const port = 3000;
+          <h3>Instale:</h3>
+          npm install express
 
-            app.get('/', (req, res) => {
-              res.send('Olá, Express!');
-            });
+          <h3>Crie o arquivo index.js:</h3>
+          const express = require('express');
+          const app = express();
+          const PORT = 3000;
 
-            app.listen(port, () => {
-              console.log(`Servidor rodando em http://localhost:${port}`);
-            });
-            </code>
+          -- Rota principal
+          app.get('/', (req, res) => {
+            res.send('Bem-vindo ao meu servidor Express!');
+          });
+
+          -- Rota exemplo
+          app.get('/sobre', (req, res) => {
+            res.send('Esta é a rota /sobre');
+          });
+
+          -- Inicia o servidor
+          app.listen(PORT, () => {
+            console.log(`Servidor rodando em http://localhost:${PORT}`);
+          });
+          <h3>Execute :</h3>
+          node index.js
+          <h3>Agora você pode acessar:</h3>
+          <ul>
+            <li>/  -- mostra a página principal</li>
+            <li>/sobre -- mostra outra rota</li>
+          </ul>
+
       </pre>
-        <p>Instale o Express com <code>npm install express</code>.</p>
       </section>
 
       <section class="secao">
-        <button onclick="window.location.href='../index.html'">
-          Voltar para o HTML
-        </button>
+        <h2>Entendendo o Express</h2>
+
+        <pre>
+        -----------------------------------------------------------------------------
+        | Função         | O que faz                     | Exemplo                  |
+        | -------------- | ----------------------------- | -------------------------|
+        | express()      | Cria o app                    | const app = express()    |
+        | app.get()      | Rota de leitura (GET)         | app.get('/', …)          |
+        | app.post()     | Rota de envio (POST)          | app.post('/login', …)    |
+        | app.listen()   | Inicia o servidor             | app.listen(3000)         |
+        | req            | Requisição (dados do cliente) | req.query, req.body      |
+        | res            | Resposta (dados do servidor)  | res.send(), res.json()   |
+        -----------------------------------------------------------------------------
+
+      </pre
+        >
+      </section>
+
+      <section class="secao">
+        <h2>API simples com Node e Express</h2>
+
+        <pre>
+          const express = require('express');
+          const app = express();
+          app.use(express.json());
+
+          const usuarios = [
+            { id: 1, nome: 'Ruan' },
+            { id: 2, nome: 'Maria' },
+          ];
+
+          -- Rota para listar todos
+          app.get('/usuarios', (req, res) => {
+            res.json(usuarios);
+          });
+
+          -- Rota para adicionar novo usuário
+          app.post('/usuarios', (req, res) => {
+            const novo = req.body;
+            usuarios.push(novo);
+            res.json({ mensagem: 'Usuário adicionado!', usuarios });
+          });
+
+          app.listen(3000, () => console.log('API rodando em http://localhost:3000'));
+
+          <h3>Teste com o Postman :</h3>
+          <ul>
+            <li>GET /usuarios</li>
+            <li>POST /usuarios com corpo JSON:</li>
+          </ul>
+          {
+            "id": 3,
+            "nome": "João"
+          }
+      </pre>
+      </section>
+
+      <section class="secao">
+        <h2>Módulos no Node</h2>
+        <p>O Node divide o código em módulos, para facilitar a organização.</p>
+        <pre>
+          <h3>Criando módulo:</h3>
+          -- arquivo: <strong>saudacao.js</strong>
+
+          function ola(nome) {
+            return `Olá, ${nome}!`;
+          }
+          module.exports = ola;
+
+          <h3>Importando módulo:</h3>
+          -- arquivo: <strong>app.js</strong>
+
+          const ola = require('./saudacao');
+          console.log(ola('Ruan'));
+
+      </pre>
+      </section>
+
+      <section class="secao">
+        <h2>Usando o Nodemon (auto reload)</h2>
+
+        <pre>
+          <h3>Para não precisar reiniciar o servidor manualmente:</h3>
+          npm install -g nodemon
+
+          <h3>Rode o servidor com:</h3>
+          nodemon index.js
+          <h4>Ele reinicia automaticamente sempre que você salvar o arquivo.</h4>
+
+      </pre>
+      </section>
+
+      <section class="secao">
+        <h2>Resumo geral</h2>
+
+        <pre>
+          ---------------------------------------------------------------------------------
+          | Conceito          | Descrição                           | Exemplo             |
+          | ----------------- | ----------------------------------- | --------------------|
+          | Node.js           | JavaScript no servidor              | node server.js      |
+          | npm               | Gerenciador de pacotes              | npm install express |
+          | Servidor HTTP     | Cria respostas para o navegador     | http.createServer() |
+          | Express           | Framework para rotas e APIs         | app.get('/', …)     |
+          | Módulos           | Partes independentes do código      | require('./modulo') |
+          | Nodemon           | Reinicia o servidor automaticamente | nodemon index.js    |
+          ---------------------------------------------------------------------------------
+
+      </pre
+        >
       </section>
     </main>
 
